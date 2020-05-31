@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>GM Mode</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body id="loadThings">
+	<div id="gameChooser" class="">
+		<div id="newGame">Start a new Leaugue</div>
+		<div id="resumeGame">Continue an old League</div>
+	</div>
+	<div id="teamPicker" class="hide">
+		<input type="text" id="leagueName">
+		<button id="chooser">Choose Your Team</button>
+		<div id="dropDiv" class="hide dropDiv"></div>
+		<button id="clicker">click</button>
+	</div>
+	<div id="continueLeague" class="hide"></div>
+	<div id="rosterPage" class="hide">
+		<div id="dashboard" class="hide center">
+			<div id="dropLeagueOp" onClick="dropLeagueOp()" class="dropDivider"><p class="dropBut">League</p>
+				<div id="droppedLeagueOp" class="hide">
+					<p>Standings</p>
+					<p>Playoffs</p>
+					<p>Finance</p>
+					<p>Finance Comparisons</p>
+					<p>Ranking Comparisons</p>
+					<p>History</p>
+					<p>Awards</p>
+				</div>
+			</div>
+			<div id="dropTeamOp" onClick="dropTeamOp()" class="dropDivider"><p class="dropBut">Team</p>
+				<div id="droppedTeamOp" class="hide">
+					<p>Lineup</p>
+					<p>Schedules</p>
+					<p>Revenue/Expense</p>
+					<p>History</p>
+					<p id="showLineups" onClick="showLineups()">Other Lineups</p>
+				</div>
+			</div>
+			<div id="dropPlayerOp" onClick="dropPlayerOp()" class="dropDivider"><p class="dropBut">Player</p>
+				<div id="droppedPlayerOp" class="hide">
+					<p id="showRoster" onClick="showRosters()">Roster</p>
+					<p>Draft</p>
+					<p>Hall of Fame</p>
+					<p id="team31a" onClick="showAllPlayers(this.id)">Player Ratings</p>
+				</div>
+			</div>
+			<div id="dropTradesOp" onClick="dropTradesOp()" class="dropDivider"><p class="dropBut">Transactions</p>
+				<div id="droppedTradesOp" class="hide">
+					<p>Free Agents</p>
+					<p>Trade</p>
+					<p>Trade Requests</p>
+					<p>Transactions</p>
+				</div>
+			</div>
+			<div id="dropStatsOp" onClick="dropStatsOp()" class="dropDivider"><p class="dropBut">Stats</p>
+				<div id="droppedStatsOp" class="hide">
+					<p>Player Stats</p>
+					<p>Team Stats</p>
+					<p>League Averages</p>
+					<p>Award Race</p>
+					<p>Records</p>
+				</div>
+			</div>
+		</div>
+		<div id="teamContainer" class="smaller hide">
+			<table>
+				<tr id="teamSelector">
+				</tr>
+			</table>
+		</div>
+		<div id="teamRosters"></div>
+		<div id="realRosters" class="hide">
+
+			<div id="teamNameDrop realRosters" class="hide center2">
+				<div id="dropLeagueOp2" class="dropDivider"><p id="insert" class="dropBut"></p>
+					<div id="droppedTOp2" class="hide">
+						<div id="teamNames"></div>
+					</div>
+				</div>
+			</div>
+
+			<table id="playersByTeam"></table>
+		</div>
+	</div>
+	<div id="userLineup"></div>
+
+	<div class="backButton hide" id="backButton">Back</div>
+	<div id="playerPage" class="hide"></div>
+    
+	<script src="main.js"></script>
+	<script src="sort.js"></script>
+</body>
+
+</html>
